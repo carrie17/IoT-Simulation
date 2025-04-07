@@ -279,6 +279,7 @@ $ sudo chroot ./ ./qemu-arm-static --strace ./usr/sbin/upnpd
 15107 fork() = 15109
 15107 exit(0)
 15107 fork() = 0
+</code></pre>
 </details>
 首先，根据输出，将缺失的文件进行补齐。
 
