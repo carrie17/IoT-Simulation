@@ -43,8 +43,6 @@ sudo ifconfig tap0 0.0.0.0 promisc up
 sudo brctl showstp br0                  
 ```
 
-
-
 ## 固件仿真
 
 目标程序为 upnp，确定指令架构如下：
@@ -368,6 +366,5 @@ make CC=../cross-compiler-armv5l/bin/armv5l-cc
 ![](imgs/netstat-upnp.PNG)
 
 ## 参考资料
-
 - [uclib-cross-compilers](https://github.com/R00tS3c/DDOS-RootSec/tree/master/uclib-cross-compilers)
 - [libnvram](https://github.com/firmadyne/libnvram)
