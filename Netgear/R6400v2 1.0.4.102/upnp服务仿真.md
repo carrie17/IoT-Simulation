@@ -292,11 +292,9 @@ touch ./squashfs-root/dev/urandom
 ```
 
 使用 ida pro 进行动态调试，进一步确定仿真失败的原因。
-
 ```bash
 sudo chroot ./ ./qemu-arm-static --strace -g 1234 ./usr/sbin/upnpd
 ```
-
 ![](imgs/ida_daemon.PNG)
 
 单步调试进入 daemon 函数后，daemon() 会调用 j_fork() 函数。为了避免之后仍有地方会调用 j_fork() 及 j_setsid() 函数，选择 patch libc 中的 fork()、setsid() 函数，使其直接 return 0。
